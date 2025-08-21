@@ -1,0 +1,13 @@
+{
+    "name": "bakachaat",
+    "short_name": "bakachaat",
+    "start_url": "index.php",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

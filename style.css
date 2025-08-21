@@ -1,0 +1,197 @@
+/* 全体のレイアウト */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e7ffde;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* メインコンテナ */
+.container {
+    max-width: 650px; /* 幅を65%縮小 */
+    width: 80%;
+    margin: 40px;
+    padding: 26px; /* パディングを縮小 */
+    background-color: #fff;
+    border-radius: 12px; /* 半径を縮小 */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* ギャップを縮小 */
+}
+.header h1 {
+    display: inline;
+    margin-right: 10px; /* 余白を追加 */
+}
+.header p {
+    display: inline;
+    margin-right: 10px; /* 余白を追加 */
+}
+
+/* ヘッダーのスタイル */
+h1, h2 {
+    font-size: 20px; /* フォントサイズ縮小 */
+    margin-bottom: 16px; /* マージン縮小 */
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ログインフォームとアカウント作成フォームのスタイル */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* ギャップを縮小 */
+}
+
+/* 入力欄のスタイル */
+input[type="text"], input[type="password"], input[type="email"], input[type="date"] {
+    padding: 10px; /* パディング縮小 */
+    font-size: 14px; /* フォントサイズ縮小 */
+    border: 2px solid #ddd;
+    border-radius: 10px; /* 半径縮小 */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* ボタンのスタイル */
+button {
+    padding: 10px; /* パディング縮小 */
+    font-size: 14px; /* フォントサイズ縮小 */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px; /* 半径縮小 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ログインフォームのスタイル */
+label {
+    font-size: 14px; /* フォントサイズ縮小 */
+    font-weight: 600;
+    color: #444;
+}
+
+/* メッセージエリア */
+#chatbox {
+    margin-top: 30px; /* マージン縮小 */
+}
+
+/* メッセージ表示エリア */
+#messages {
+    border: 2px solid #ddd;
+    padding: 18px; /* パディング縮小 */
+    height: 210px; /* 高さ縮小 */
+    max-height: 300px; /* 最大高さ縮小 */
+    overflow-y: auto;
+    border-radius: 10px; /* 半径縮小 */
+    background-color: #fafafa;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* メッセージ入力欄 */
+input[type="text"]#message {
+    width: 100%;
+    padding: 10px; /* パディング縮小 */
+    font-size: 14px; /* フォントサイズ縮小 */
+    border: 2px solid #ddd;
+    border-radius: 10px; /* 半径縮小 */
+    margin-top: 16px; /* マージン縮小 */
+    background-color: #fafafa;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]#message:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* アカウント情報エリア */
+#account-info, #account-edit {
+    margin-top: 20px; /* マージン縮小 */
+    background-color: #f9f9f9;
+    padding: 20px; /* パディング縮小 */
+    border-radius: 12px; /* 半径縮小 */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 区切り線 */
+hr {
+    margin: 30px 0; /* マージン縮小 */
+    border: 1px solid #ddd;
+}
+
+/* ログアウトリンク */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 25px; /* マージン縮小 */
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* レスポンシブデザイン（スマホ対応） */
+@media (max-width: 768px) {
+    .container {
+        padding: 18px;
+        margin: 18px;
+    }
+
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    button, input[type="text"], input[type="password"], input[type="email"], input[type="date"] {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    #messages {
+        background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* 再指定 */
+        height: calc(100vh - 150px); /* スマホ画面に応じた高さを調整 */    }
+
+    input[type="text"]#message {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 16px;
+    }
+
+    button, input[type="text"], input[type="password"], input[type="email"], input[type="date"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #messages {
+        height: 160px;
+    }
+
+    input[type="text"]#message {
+        padding: 10px;
+    }
+}
